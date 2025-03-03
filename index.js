@@ -1,7 +1,7 @@
 // index.js
 
 const inquirer = require('inquirer');
-const db = require('./db'); // Importing the SQL queries module
+const db = require('./db/db'); // Importing the SQL queries module
 
 // Main menu prompt
 const mainMenu = async () => {
