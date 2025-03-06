@@ -40,3 +40,39 @@ export const viewAllEmployees = async () => {
   const { rows } = await pool.query(query);
   return rows;
 };
+
+// Function to add a new department
+export const addDepartmentToDB = async (name) => {
+  const query = 'INSERT INTO department (name) VALUES ($1)';
+  await pool.query(query, [name]);
+};
+
+// Function to add a new role
+export const addRoleToDB = async (title, salary, departmentId) => {
+  const query = 'INSERT INTO role (title, salary, department_id) VALUES ($1, $2, $3)';
+  await pool.query(query, [title, salary, departmentId]);
+};
+
+// Function to add a new employee
+export const addEmployeeToDB = async (firstName, lastName, roleId, managerId) => {
+  const query = 'INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ($1, $2, $3, $4)';
+  await pool.query(query, [firstName, lastName, roleId, managerId]);
+};
+
+// Function to update an employee's role
+export const updateEmployeeRole = async (employeeId, roleId) => {
+  const query = 'UPDATE employee SET role_id = $1 WHERE id = $2';
+  await pool.query(query, [roleId, employeeId]);
+};
+
+// Function to delete a department
+export const deleteDepartment = async (departmentId) => {
+  const query = 'DELETE FROM department WHERE id = $1';
+  await pool.query(query, [departmentId]);
+};
+
+// Function to delete a role
+export const deleteRole = async (roleId) => {
+  const query = 'DELETE FROM role WHERE id = $1';
+  await pool.query(query, [roleId]);
+};
