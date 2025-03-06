@@ -1,6 +1,5 @@
-// db.js
-
-const { Pool } = require('pg');
+import pkg from 'pg';
+const { Pool } = pkg;
 
 // Set up connection to the PostgreSQL database
 const pool = new Pool({
@@ -12,14 +11,14 @@ const pool = new Pool({
 });
 
 // Function to view all departments
-const viewAllDepartments = async () => {
+export const viewAllDepartments = async () => {
   const query = 'SELECT * FROM department';
   const { rows } = await pool.query(query);
   return rows;
 };
 
 // Function to view all roles
-const viewAllRoles = async () => {
+export const viewAllRoles = async () => {
   const query = `
     SELECT role.id, role.title, role.salary, department.name AS department
     FROM role
@@ -30,7 +29,7 @@ const viewAllRoles = async () => {
 };
 
 // Function to view all employees
-const viewAllEmployees = async () => {
+export const viewAllEmployees = async () => {
   const query = `
     SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, manager.first_name AS manager
     FROM employee
@@ -40,11 +39,4 @@ const viewAllEmployees = async () => {
   `;
   const { rows } = await pool.query(query);
   return rows;
-};
-
-// Exporting functions for use in other modules
-module.exports = {
-  viewAllDepartments,
-  viewAllRoles,
-  viewAllEmployees
 };
