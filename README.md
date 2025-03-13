@@ -4,6 +4,10 @@
 
 A Command Line Interface (CLI) application to manage and track employees efficiently within an organization.
 
+## How-To Video
+
+https://drive.google.com/file/d/1OfS8w9tHu9jgAoy6pcVxTch01ItNqVYk/view
+
 # Table of Contents
 
 - Description
