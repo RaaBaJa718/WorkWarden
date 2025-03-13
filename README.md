@@ -1,24 +1,24 @@
 # WorkWarden
 
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 A Command Line Interface (CLI) application to manage and track employees efficiently within an organization.
 
 # Table of Contents
 
-Description
+- Description
 
-Features
+- Features
 
-Installation
+- Installation
 
-Usage
+- Usage
 
-File Structure
+- Technologies Used
 
-Technologies Used
+- Contributing
 
-Contributing
-
-License
+- License
 
 # Description
 
@@ -26,59 +26,59 @@ WorkWarden is a CLI-based tool designed for managing employee data, roles, and d
 
 # Features
 
-Add, view, update, and delete employee records.
+- Add, view, update, and delete employee records.
 
-Manage roles, departments, and employee assignments.
+- Manage roles, departments, and employee assignments.
 
-View structured reports on workforce details.
+- View structured reports on workforce details.
 
-Ensure streamlined organization of data with easy-to-use prompts.
+- Ensure streamlined organization of data with easy-to-use prompts.
 
 # Installation
 
-Make sure Node.js and MySQL are installed on your system.
+- Make sure Node.js and MySQL are installed on your system.
 
-Clone this repository:
+- Clone this repository:
 
-git clone <your-repository-url>
+- git clone <your-repository-url>
 
-Navigate to the project directory:
+- Navigate to the project directory:
 
-cd WorkWarden
+- cd WorkWarden
 
-Install dependencies using npm:
+- Install dependencies using npm:
 
-npm install
+- npm install
 
-Set up the database:
+- Set up the database:
 
-Import schema.sql and seeds.sql located in the db folder into your MySQL database.
+- Import schema.sql and seeds.sql located in the db folder into your MySQL database.
 
 # Usage
 
-Start the application:
+- Start the application:
 
-bash
+- bash
 
-node index.js
+- node index.js
 
-Follow the CLI prompts to interact with the employee database.
+- Follow the CLI prompts to interact with the employee database.
 
-Available actions include:
+- Available actions include:
 
-Viewing employees, departments, and roles.
+- Viewing employees, departments, and roles.
 
-Adding or updating employees, roles, and departments.
+- Adding or updating employees, roles, and departments.
 
-Deleting records as needed.
+- Deleting records as needed.
 
 # Technologies Used
 
-Node.js: Server-side runtime environment.
+- Node.js: Server-side runtime environment.
 
-Inquirer.js: Interactive prompts for the CLI.
+- Inquirer.js: Interactive prompts for the CLI.
 
-MySQL: Database for managing employee records.
+- MySQL: Database for managing employee records.
 
 # Contributing
 
